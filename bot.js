@@ -52,5 +52,12 @@ client.on('message', message => {
     }) //7md
     }  //7md
     }) //7md
+
+    member.createDM().then(function (channel) {
+    return channel.send(`:rose:  ولكم نورت السيرفر:rose: 
+:crown:اسم العضو  ${member}:crown:  
+انت العضو رقم ${member.guild.memberCount} `) 
+}).catch(console.error)
+})
     
     client.login(process.env.BOT_TOKEN);
