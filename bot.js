@@ -61,4 +61,15 @@ client.on("guildMemberAdd", member => {
 }).catch(console.error)
 })
     
+client.on ("guildMemberAdd", member => {
+  
+   var role = member.guild.roles.find ("name", "WC -«MEMBER»");
+   member.addRole (role);
+  
+})
+
+client.on ("guildMemberRemove", member => {
+   
+})
+
     client.login(process.env.BOT_TOKEN);
